@@ -1,13 +1,256 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  position:relative;
 }
+
+.header {
+  font-size: 1.8rem;
+  background-color: #ccf3e6;
+  text-align: center;
+  padding: 0.8rem 0;
+}
+
+.form-container {
+  background-color: #00100b;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container form {
+  display: flex;
+  gap: 2rem;
+}
+
+.form-container select,
+input,
+button {
+  border-radius: 1.2rem;
+  border: none;
+  padding: 1.2rem 1.8rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  font-size: 1.4rem;
+}
+
+.form-container select {
+  padding-right: 3rem;
+}
+.input-price {
+  width: 10rem;
+}
+
+.input-price:focus,
+.input-product:focus,
+select:focus {
+  box-shadow: 0 0 0 0.4rem #1dd4acb9;
+  outline: none;
+}
+
+.form-container button {
+  background-color: #1dd4ac;
+}
+
+.fl-table {
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.fl-table td,
+.fl-table th {
+  text-align: left;
+  padding: 8px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding-left: 1.2rem;
+}
+
+.fl-table td {
+  /* border-right: 1px solid #f8f8f8; */
+  font-size: 1.2rem;
+}
+
+.fl-table tbody td {
+  border-bottom: 1px solid #eee;
+  padding-top: 2.4rem;
+  padding-bottom: 1.2rem;
+  text-align: left;
+  color: #656565;
+  font-size: 1.4rem;
+}
+
+.fl-table thead th {
+  color: #656565;
+  background: #f5f5f5;
+}
+
+.fl-table thead th:nth-child(odd) {
+  color: #656565;
+  background: #eaeaea;
+}
+
+.deliver::after {
+  content: "⦿ Delivered";
+  background-color: #bbefdd;
+  padding: 4px 8px;
+  color: #139d7f;
+  border-radius: 8px;
+}
+
+.transit::after {
+  content: "⦿ Transit";
+  background-color: #ffeca9;
+  padding: 4px 8px;
+  color: #ecb800;
+  border-radius: 8px;
+}
+
+.cancel::after {
+  content: "⦿ Cancel";
+  background-color: #9ed8ff;
+  padding: 4px 8px;
+  color: #0b82d0;
+  border-radius: 8px;
+}
+
+.toastify {
+  font-family: "Poppins";
+  font-size: 1.4rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.icons {
+  font-size: 3.2rem;
+  color: #fff;
+  padding: 0.6rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.delivery {
+  background-color: #18b895;
+}
+
+.cancelation {
+  background-color: #057dcd;
+}
+
+.delete {
+  background-color: #ef2c2c;
+}
+
+.tool-btn {
+  color: #fff;
+  background-color: #1e1e1e;
+}
+
+.tools {
+  position: absolute;
+  right: 0.8rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #5555551c;
+  top: 0;
+  pointer-events: none;
+}
+
+.wallet {
+  text-align: center;
+  font-size: 1.8rem;
+  height:fit-content;
+  padding: 3.6rem 2.4rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.5rem 0.8rem 0.8rem #b7b7b733;
+}
+
+
+
+/* @media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+
+    html {
+      font-size: 55%;
+    }
+} */
