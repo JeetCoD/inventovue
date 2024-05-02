@@ -262,14 +262,14 @@ function Wallet({ isOpen }) {
 //   ) : null;
 // }
 
-// function WalletFilter({ onWalletOpen }) {
-//   return (
-//     <div className="tools">
-//       <TbWallet className="tool-btn icons" onClick={onWalletOpen} />
-//       <TbFilter className="tool-btn icons" />
-//     </div>
-//   );
-// }
+function WalletFilter({ onWalletOpen }) {
+  return (
+    <div className="tools">
+      <TbWallet className="tool-btn icons" onClick={onWalletOpen} />
+      <TbFilter className="tool-btn icons" />
+    </div>
+  );
+}
 
 function Toaster() {
   return (
