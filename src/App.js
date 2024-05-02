@@ -245,31 +245,31 @@ function Wallet({ isOpen }) {
     </div>
   ) : null;
 }
-function Filter({ isOpen }) {
-  return isOpen ? (
-    <div className="modal">
-      <div className="wallet">
-        <h1>Filters</h1>
-        <form>
-          <select>
-            <option value="deliver">Deliver</option>
-            <option value="cancel">Cancel</option>
-            <option value="transit">Transit</option>
-          </select>
-        </form>
-      </div>
-    </div>
-  ) : null;
-}
+// function Filter({ isOpen }) {
+//   return isOpen ? (
+//     <div className="modal">
+//       <div className="wallet">
+//         <h1>Filters</h1>
+//         <form>
+//           <select>
+//             <option value="deliver">Deliver</option>
+//             <option value="cancel">Cancel</option>
+//             <option value="transit">Transit</option>
+//           </select>
+//         </form>
+//       </div>
+//     </div>
+//   ) : null;
+// }
 
-function WalletFilter({ onWalletOpen }) {
-  return (
-    <div className="tools">
-      <TbWallet className="tool-btn icons" onClick={onWalletOpen} />
-      <TbFilter className="tool-btn icons" />
-    </div>
-  );
-}
+// function WalletFilter({ onWalletOpen }) {
+//   return (
+//     <div className="tools">
+//       <TbWallet className="tool-btn icons" onClick={onWalletOpen} />
+//       <TbFilter className="tool-btn icons" />
+//     </div>
+//   );
+// }
 
 function Toaster() {
   return (
